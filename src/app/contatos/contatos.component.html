@@ -1,0 +1,45 @@
+<h2>Contatos</h2>
+<hr>
+  <div>  
+    <h3>Adicionar novo contato</h3>
+    <table class="formulario">
+      <tr>
+        <td>Nome:</td>
+        <td><input type="text" id="nomeContato" class="textbox" [(ngModel)]="contato.nome" required placeholder="Digite o nome"/></td>
+      </tr>
+      <tr>
+        <td>E-mail:</td>
+        <td><input type="text" id="emailContato" class="textbox" [(ngModel)]="contato.email" required placeholder="Digite o e-mail"/></td>
+      </tr>
+      <tr>
+        <td>Telefone:</td>
+        <td><input type="text" id="telefoneContato" class="textbox" [(ngModel)]="contato.telefone" placeholder="Digite o telefone"/></td>
+      </tr>      
+      <tr>
+        <td>Grupo:</td>
+        <td><input type="text" id="idGrupo" class="textbox" [(ngModel)]="contato.grupo.id" placeholder="Digite o ID do grupo"/></td>
+      </tr> 
+    </table>
+    <button (click)="add();">Adicionar</button>
+  </div>
+  <br>
+  <table class="lista">
+    <tr class="tituloLista">
+      <td width="10%">ID</td>
+      <td width="20%">NOME</td>
+      <td width="20%">E-MAIL</td>
+      <td width="20%">TELEFONE</td>
+      <td width="10%">GRUPO ID</td>
+      <td width="10%">DETALHE</td>
+      <td width="10%">DELETAR</td>
+    </tr>
+    <tr *ngFor="let contato of contatos">
+      <td>{{contato.id}}</td>
+      <td>{{contato.nome}}</td>
+      <td>{{contato.email}}</td>
+      <td>{{contato.telefone}}</td>
+      <td>{{contato.grupo.id}}</td>
+      <td><a routerLink="/contato/{{contato.id}}" class="detalhe">Detalhe</a></td>
+      <td><button class="delete" title="Deletar contato" (click)="delete(contato)">Deletar</button></td>
+    </tr>
+  </table>

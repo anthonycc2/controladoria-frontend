@@ -120,5 +120,8 @@
       }
     }
   },
-  "defaultProject": "controladoria-front"
+  "defaultProject": "controladoria-front",
+  "cli": {
+    "analytics": "992b8567-9103-499f-b142-554c95df68b4"
+  }
 }

@@ -1,0 +1,62 @@
+  /*h1 {
+    font-size: 1.2em;
+    margin-bottom: 0;
+  }*/
+
+  /*nav a {
+    padding: 5px 10px;
+    text-decoration: none;
+    margin-top: 10px;
+    display: inline-block;
+    background-color: #eee;
+    border-radius: 4px;
+  }
+
+  nav a:visited, a:link {
+    color: #334953;
+  }
+
+  nav a:hover {
+    color: #039be5;
+    background-color: #cfd8dc;
+  }
+
+  nav a.active {
+    color: #039be5;
+  }*/
+  
+  /*@import "./contatos/contatos.component.css";*/
+
+  .header {
+    background-color: rgb(16, 16, 88);
+  }
+
+  .menu, footer {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: rgb(175, 175, 235);
+    padding: 10px 10px 10px 10px;
+    text-align: center;
+    /*background-color: rgb(6, 6, 78);*/
+    /*height: 40pt;*/
+    /*align-content: center;*/
+    /*vertical-align: middle;*/
+  }
+
+  a {
+    color:rgb(16, 16, 88);
+  }
+
+  a:hover {
+    font-weight: bold;
+    color: white;
+  }
+
+  .principal {
+    /*height: 400px;*/
+    border-style: double;
+    padding: 10px 10px 10px 10px;
+  }
+
+  span {
+    font-size: xx-large;
+  }

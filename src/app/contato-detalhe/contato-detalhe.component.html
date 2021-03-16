@@ -1,0 +1,30 @@
+<div *ngIf="contato">
+    <h2>Manutenção de contato</h2>
+    <div>
+      <table class="formulario">
+        <tr>
+          <td>id:</td>
+          <td>{{contato.id}}</td>
+        </tr>
+        <tr>
+          <td>Nome:</td>
+          <td><input type="text" id="nomeContato" class="textbox" [(ngModel)]="contato.nome" required placeholder="Digite o nome"/></td>
+        </tr>
+        <tr>
+          <td>E-mail:</td>
+          <td><input type="text" id="emailContato" class="textbox" [(ngModel)]="contato.email" required placeholder="Digite o e-mail"/></td>
+        </tr>
+        <tr>
+          <td>Telefone:</td>
+          <td><input type="text" id="telefoneContato" class="textbox" [(ngModel)]="contato.telefone" placeholder="Digite o telefone"/></td>
+        </tr>      
+        <tr>
+          <td>Grupo ID:</td>
+          <td><input type="text" id="idGrupo" class="textbox" [(ngModel)]="contato.grupo.id" placeholder="Digite o ID do grupo"/></td>
+        </tr>      
+        </table>
+    </div>
+    <button (click)="goBack()">Voltar</button>
+    &nbsp;
+    <button (click)="save()">Salvar</button>
+  </div>

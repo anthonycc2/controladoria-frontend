@@ -1,18 +1,27 @@
-<div *ngIf="grupo">
-    <h2>Manutenção de grupo</h2>
-    <div>
-      <table class="formulario">
-        <tr>
-          <td>id:</td>
-          <td>{{grupo.id}}</td>
-        </tr>
-        <tr>
-          <td>Nome:</td>
-          <td><input type="text" id="nomeGrupo" class="textbox" [(ngModel)]="grupo.nome" required placeholder="Digite o nome"/></td>
-        </tr>      
-        </table>
-    </div>
-    <button (click)="goBack()">Voltar</button>
-    &nbsp;
-    <button (click)="save()">Salvar</button>
+<h2>Grupos</h2>
+<hr>
+  <div>  
+    <h3>Adicionar novo grupo</h3>
+    <table class="formulario">
+      <tr>
+        <td>Nome:</td>
+        <td><input type="text" id="nomeGrupo" class="textbox" [(ngModel)]="grupo.nome" required placeholder="Digite o nome"/></td>
+      </tr> 
+    </table>
+    <button (click)="add();">Adicionar</button>
   </div>
+  <br>
+  <table class="lista">
+    <tr class="tituloLista">
+      <td width="30%">ID</td>
+      <td width="30%">NOME</td>
+      <td width="20%">DETALHE</td>
+      <td width="20%">DELETAR</td>
+    </tr>
+    <tr *ngFor="let grupo of grupos">
+      <td>{{grupo.id}}</td>
+      <td>{{grupo.nome}}</td>
+      <td><a routerLink="/grupo/{{grupo.id}}" class="detalhe">Detalhe</a></td>
+      <td><button class="delete" title="Deletar grupo" (click)="delete(grupo)">Deletar</button></td>
+    </tr>
+  </table>

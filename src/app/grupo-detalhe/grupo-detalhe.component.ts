@@ -37,4 +37,5 @@ export class GrupoDetalheComponent implements OnInit {
     this.grupoService.updateGrupo(this.grupo)
       .subscribe(() => this.goBack());
   }
+  
 }
